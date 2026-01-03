@@ -1,0 +1,504 @@
+/*整體樣式*/
+body {
+  overflow-x: hidden;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+}
+.text-muted {
+  color: #777777;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+p.large {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.img-centered {
+  margin: 0 auto;
+}
+.bg-light-gray {
+  background-color: #eeeeee;
+}
+
+/*按鈕*/
+.btn-xl {
+  color: white;
+  background-color: #8d8d8d;
+  border-color: #8d8d8d;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 20px 40px;
+}
+
+
+/*傳送按鈕*/
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active
+ {
+  color: white;
+  background-color: #fec503;
+  border-color: #f6bf01;
+}
+.btn-xl:active,
+.btn-xl.active{
+  background-image: none;
+}
+
+
+header {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: white;
+}
+header .intro-text {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+header .intro-text .intro-lead-in {
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 25px;
+}
+header .intro-text .intro-heading {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 25px;
+}
+@media (min-width: 768px) {
+  header .intro-text {
+    padding-top: 300px;
+    padding-bottom: 200px;
+  }
+  header .intro-text .intro-lead-in {
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 25px;
+  }
+  header .intro-text .intro-heading {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 75px;
+    margin-bottom: 50px;
+  }
+}
+section {
+  padding: 100px 0;
+}
+section h2.section-heading {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+section h3.section-subheading {
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 75px;
+}
+@media (min-width: 768px) {
+  section {
+    padding: 150px 0;
+  }
+}
+.service-heading {
+  margin: 15px 0;
+  text-transform: none;
+}
+
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+  margin: 0;
+}
+
+#portfolio * {
+  z-index: 2;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: "";
+  width: 2px;
+  background-color: #f1f1f1;
+  left: 40px;
+  margin-left: -1.5px;
+  display: none;
+}
+.timeline > li {
+  margin-bottom: 50px;
+  position: relative;
+  min-height: 50px;
+}
+
+.timeline > li .timeline-panel {
+  width: 100%;
+  float: right;
+  padding: 0 20px 0 100px;
+  position: relative;
+  text-align: left;
+}
+
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+  text-align: left;
+  padding: 0 20px 0 100px;
+}
+
+.timeline .timeline-body > p,
+.timeline .timeline-body > ul {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .timeline:before {
+    left: 50%;
+  }
+
+  .timeline > li .timeline-panel {
+    width: 41%;
+    float: left;
+    padding: 0 20px 20px 30px;
+    text-align: right;
+  }
+
+  .timeline > li .timeline-image h4 {
+    font-size: 13px;
+    margin-top: 16px;
+    line-height: 18px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+    text-align: left;
+    padding: 0 30px 20px 20px;
+  }
+}
+@media (min-width: 992px) {
+  .timeline > li {
+    min-height: 150px;
+  }
+  .timeline > li .timeline-panel {
+    padding: 0 20px 20px;
+  }
+  .timeline > li .timeline-image {
+    width: 150px;
+    height: 150px;
+    margin-left: -75px;
+  }
+
+  .timeline > li.timeline-inverted > .timeline-panel {
+    padding: 0 20px 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .timeline > li {
+    min-height: 170px;
+  }
+  .timeline > li .timeline-panel {
+    padding: 0 20px 20px 100px;
+  }
+  .timeline > li .timeline-image {
+    width: 170px;
+    height: 170px;
+    margin-left: -85px;
+  }
+
+  .timeline > li.timeline-inverted > .timeline-panel {
+    padding: 0 100px 20px 20px;
+  }
+}
+/*表單*/
+section#contact {
+  background-color: #222222;
+  background-image: url('../img/IMG_0355.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+section#contact .section-heading {
+  color: white;
+}
+section#contact .form-group {
+  margin-bottom: 25px;
+}
+section#contact .form-group input,
+section#contact .form-group textarea {
+  padding: 20px;
+}
+section#contact .form-group input.form-control {
+  height: auto;
+}
+section#contact .form-group textarea.form-control {
+  height: 236px;
+}
+section#contact .form-control:focus {
+  border-color: #474747;
+  box-shadow: none;
+}
+section#contact ::-webkit-input-placeholder {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eeeeee;
+}
+section#contact :-moz-placeholder {
+  /* Firefox 18- */
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eeeeee;
+}
+section#contact ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eeeeee;
+}
+section#contact :-ms-input-placeholder {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eeeeee;
+}
+section#contact .text-danger {
+  color: #e74c3c;
+}
+/*頁尾*/
+footer {
+  padding: 25px 0;
+  text-align: center;
+}
+footer span.copyright {
+  line-height: 40px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-transform: none;
+}
+
+
+/* 所有圖層的共同設定 */
+header img,
+header h2 {
+    position: absolute;
+    left: 50%; /* 基準水平中心 */
+    top: 50%;  /* 基準垂直中心 */
+    transform: translate(-50%, -50%); /* 調整置中偏移 */
+}
+
+
+
+
+/* （背景） */
+#EXIT02{
+    bottom: 10;   /* 貼到底部 */
+    left: 50%;   /* 調整水平位置 */
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 1300px;
+    height: 1300px;
+    top: auto;
+    opacity: 0;                 /* 透明度 */
+    transition: opacity 1s;     /* 漸變效果 */
+}
+
+
+
+#EXIT03{
+    z-index: 3;
+    bottom: 0;
+    top: 10%;
+    transform: translateX(-60%);
+    width: 500px;
+    left: 70%;   /* 調整水平位置 */
+}
+
+/* （前景） */
+#EXIT04{
+    z-index: 5;
+    bottom: 0;
+    top: 30%;
+    transform: translateX(-50%);
+    width: 250px;
+    left: 30%;   /* 調整水平位置 */
+}
+
+/* 漂浮在最前 */
+#EXIT05{
+  top: 10%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    width: 100px;
+}
+
+
+/* 文字（最前層 UI） */
+#title {
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    font-size: 10rem;
+    height: 100%;
+    left: 5%;
+    top: 80%;
+    transform: none;
+}
+
+#EXIT06{
+  top: 27%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    width: 700px;
+}
+
+#EXIT07{
+  top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    width: 50px;
+}
+
+
+/* Avatar Section */
+.avatar-section {
+    padding: 80px 0 40px; /* 上下留白 */
+}
+
+.avatar-img {
+    width: 180px;        /* 頭貼大小 */
+    height: 180px;
+    border-radius: 50%;  /* 圓形 */
+    object-fit: cover;   /* 不變形裁切 */
+    border: 4px solid #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.avatar-img {
+    box-shadow: 
+        0 0 0 6px rgba(255, 255, 255, 0),
+        0 15px 40px rgba(7, 135, 255, 0.5);
+}
+
+/* Avatar 容器 */
+.avatar-wrap {
+    position: relative;
+    display: inline-block; /* 讓整組仍然置中 */
+}
+
+/* 左邊旋轉圖片 */
+.rotate-img {
+    position: absolute;
+    left: -120px;          /* 控制在頭貼左邊 */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;           /* 旋轉圖大小 */
+    height: 80px;
+    pointer-events: none;  /* 不影響點擊 */
+}
+
+
+/* 右側名字 */
+.avatar-name {
+    position: absolute;
+    right: -250px;         /* 控制在頭貼右邊 */
+    top: 50%;
+    transform: translateY(-50%);
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    
+
+    color: #222;
+    white-space: nowrap;  /* 不換行 */
+}
+/* 調整名字位置 */
+.avatar-name {
+    letter-spacing: 0.2em;
+}
+/* 調整標題位置 */
+
+/* Bottom Slider */
+.bottom-slider {
+    width: 100%;
+    overflow: hidden;
+    background: #000;      /* 背景顏色 */
+    padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content; /* 自動寬度 */
+  animation: scroll 30s linear infinite;/* 30s調整速度 infinite讓動畫無限跑 */
+}
+.slider-track:hover {
+  display: flex;
+  width: max-content; /* 自動寬度 */
+  animation: scrollBack 30s linear infinite;
+}
+
+.slide {
+    width: 300px;
+    flex-shrink: 0;
+    padding: 0 10px;
+}
+
+.slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* 移動半軌道，因為複製了一輪(為了無縫移動 100%會用跳的) */
+}
+@keyframes scrollBack {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); } /* 移動半軌道，因為複製了一輪 */
+}
+.bottom-slider:hover .slider-track {
+    animation-play-state: paused;
+}

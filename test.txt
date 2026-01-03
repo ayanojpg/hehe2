@@ -1,0 +1,13 @@
+ArtDB.insert(
+    [
+        {name:img/IMG_0209.png}
+        {name:img/IMG_0228.png}
+        {name:img/IMG_0236.png}
+        {name:img/IMG_0254.png}
+        {name:img/IMG_0480.png}
+        {name:img/IMG_0486.png}
+        {name:img/IMG_1589.png}
+        {name:img/IMG_1692.png}
+        {name:img/IMG_1755.png}
+    ]
+)

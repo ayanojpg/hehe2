@@ -495,10 +495,3 @@ header h2 {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); } /* 移動半軌道，因為複製了一輪(為了無縫移動 100%會用跳的) */
 }
-@keyframes scrollBack {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(50%); } /* 移動半軌道，因為複製了一輪 */
-}
-.bottom-slider:hover .slider-track {
-    animation-play-state: paused;
-}

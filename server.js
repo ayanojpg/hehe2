@@ -51,7 +51,7 @@ server.post("/fuuckyou", (req, res) =>{
     fuuckyouDB.insert(req.body).catch(err => console.log(err));    // 將 req.body 新增到 fuuckyouDB 資料庫
 
 
-    if(req.files && req.files.myFile1){     // 偵測並檢查是否有上傳檔案
+    if(req.files && req.files.myFile1){     // 判斷是否有上傳檔案
         var upFile=req.files.myFile1;
         upFile.mv(__dirname+"/Public/upload/"+upFile.name, function(err){
             if(err){
@@ -64,12 +64,11 @@ server.post("/fuuckyou", (req, res) =>{
         res.render("msg",{message:"沒有檔案但我收到ㄌ"});
     }
 });
-//有fuukyou.db有fuukyou.db有fuukyou.db有fuukyou.db有fuukyou.db有fuukyou.db有fuukyou.db有fuukyou.db有fuukyou.db有fuukyou.db有fuukyou.db
 
 server.post("/ueue", (req, res) =>{
         
 
-    console.log("耶比:", req.body);// 先在後端 console.log 輸出收到的資料（方便偵錯
+    console.log("耶比:", req.body);// 先在後端 console.log 輸出收到的資料（方便偵錯）
     fuuckyouDB.insert(req.body).catch(err => console.log(err));
     // 將 req.body 先插入 fuuckyouDB 資料庫（不包含圖片路徑） - insert()：新增一筆資料.catch()：若出現錯誤會印出 這裡先插入的是文字資料，不包含圖片
 
@@ -79,7 +78,8 @@ server.post("/ueue", (req, res) =>{
         req.body.ueueue = savePath;//在資料庫內儲存圖片路徑
 
         // 將檔案移動到指定路徑 (__dirname + "/Public/img/")
-        upFile.mv(__dirname+"/Public/img/"+upFile.name, function(err){
+        upFile.mv(__dirname+"/Public/img/"+upFile.name, function(err){  //寫入圖片檔案到伺服器指定資料夾
+            //判斷是否正確寫入
             if(err){
                 res.render("msg",{message:"失敗: "+err});
             }else{

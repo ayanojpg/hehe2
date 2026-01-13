@@ -476,7 +476,7 @@ header h2 {
 .slider-track:hover {
   display: flex;
   width: max-content; /* 自動寬度 */
-  animation: scrollBack 30s linear infinite;
+  animation: none 30s linear infinite;
 }
 
 .slide {

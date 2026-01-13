@@ -69,22 +69,38 @@
 
    
 <script>
- // 啟用插件
+   //啟用 ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
-    //滾動視差
+    //滾動視差 
+    //有 1 秒的緩衝平滑感
+    //縮放到原本的 75%
+    //動畫時間（在非 scrub 情況下才會完整使用）
+    //縮放基準點：水平中間、垂直底部
     gsap.to("#EXIT02", { scrollTrigger: { scrub: 1 }, scale: 0.75, duration: 3, transformOrigin: "50% 100%" });
     //淡入動畫
+    //以 #EXIT02 本身作為觸發元素
+    //頂部到視窗30%高度時開始
+    //元素頂部到視窗40%高度時結束
+    //動畫與滾動同步（true:沒有延遲）
+    //透明度變為 1（完全顯示）
     gsap.to("#EXIT02", { scrollTrigger: {trigger: "#EXIT02",start: "top 30%",end: "top 40%",scrub: true},opacity: 1}); 
-    //水平移動
     gsap.to("#EXIT03", { scrollTrigger: { scrub: 1 }, x: 300, duration: 3 });
     gsap.to("#EXIT04", { scrollTrigger: { scrub: 1 }, x: 250, duration: 3 }); 
     gsap.to("#EXIT05", { scrollTrigger: { scrub: 1 }, x: 150, duration: 3 });
     gsap.to("#EXIT06", { scrollTrigger: { scrub: 1 }, x: 80, duration: 3 });
     gsap.to("#EXIT07", { scrollTrigger: { scrub: 1 }, x: 100, duration: 3 });
+    // 讓動畫隨著滾動進度平滑播放，值越大越慢（1秒延遲平滑）
+    // 動畫持續 3 秒（duration 主要影響滾動速度換算)
     //標題移動
     gsap.to("#title", { scrollTrigger: { scrub: 1 }, x: -300, duration: 4 });
+
     //旋轉
+    //放大到2倍
+    // 放大或縮小一次花2秒
+    //動畫來回播放放大 → 縮小
+    //無限循環
+    //緩慢曲線
     gsap.to(".rotate-img", {scale: 2,duration: 2,yoyo: true,repeat: -1,ease: "sine.inOut"});
 
 
@@ -182,20 +198,15 @@
     <div class="slider-track">
         <div class="slide" v-for="item in ueue" :key="item.ueueue">
             <img :src="item.ueueue" alt="">
-                    <!--<div class="slide"><img src="img/IMG_0228.png" alt=""></div>
-        <div class="slide"><img src="img/IMG_0236.png" alt=""></div>
-        <div class="slide"><img src="img/IMG_0254.png" alt=""></div>
-        <div class="slide"><img src="img/IMG_1755.png" alt=""></div>
-        <div class="slide"><img src="img/IMG_1692.png" alt=""></div>
-        <div class="slide"><img src="img/IMG_1589.png" alt=""></div> -->
+            
         </div>
 
         <!-- 複製一輪 -->
         <div class="slide" v-for="item in ueue" :key="'copy-' + item.ueueue">
             <img :src="item.ueueue" alt="">
         </div>
-    </div>
-</section>
+    </div><!-- vfor是找ueue的圖用的 --> <!-- 把輪播的圖片存在ueue -->
+</section> 
 
 
 
@@ -209,7 +220,6 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- <form name="sentMessage" id="contactForm" action="/contact"  method="POST" enctype="multipart/form-data"> -->
                     <form name="sentMessage" id="contactForm" action="/fuuckyou"  method="POST" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-6">

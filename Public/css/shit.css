@@ -74,49 +74,11 @@ header {
   text-align: center;
   color: white;
 }
-header .intro-text {
-  padding-top: 100px;
-  padding-bottom: 50px;
-}
-header .intro-text .intro-lead-in {
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: italic;
-  font-size: 22px;
-  line-height: 22px;
-  margin-bottom: 25px;
-}
-header .intro-text .intro-heading {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 50px;
-  margin-bottom: 25px;
-}
-@media (min-width: 768px) {
-  header .intro-text {
-    padding-top: 300px;
-    padding-bottom: 200px;
-  }
-  header .intro-text .intro-lead-in {
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: italic;
-    font-size: 40px;
-    line-height: 40px;
-    margin-bottom: 25px;
-  }
-  header .intro-text .intro-heading {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 75px;
-    line-height: 75px;
-    margin-bottom: 50px;
-  }
-}
+
 section {
   padding: 100px 0;
 }
+/*上方ㄉnice 2 me u*/
 section h2.section-heading {
   font-size: 40px;
   margin-top: 0;
@@ -149,6 +111,7 @@ section h3.section-subheading {
 #portfolio * {
   z-index: 2;
 }
+/*文字ㄉ部分*/
 
 .timeline {
   list-style: none;
@@ -412,13 +375,13 @@ header h2 {
     border-radius: 50%;  /* 圓形 */
     object-fit: cover;   /* 不變形裁切 */
     border: 4px solid #fff;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);/*水平 垂直 模糊半徑 透明度 */
 }
 
 .avatar-img {
     box-shadow: 
-        0 0 0 6px rgba(255, 255, 255, 0),
-        0 15px 40px rgba(7, 135, 255, 0.5);
+        0 0 0 6px rgba(255, 255, 255, 0),/*水平 垂直 模糊半徑 透明度 */
+        0 15px 40px rgba(7, 135, 255, 0.5);/*水平 垂直 模糊半徑 透明度 */
 }
 
 /* Avatar 容器 */
@@ -441,7 +404,7 @@ header h2 {
 
 /* 右側名字 */
 .avatar-name {
-    position: absolute;
+    position: absolute;/*讓元素脫離正常排版，並且可以用 top / left / right / bottom 精準定位*/
     right: -250px;         /* 控制在頭貼右邊 */
     top: 50%;
     transform: translateY(-50%);
@@ -474,24 +437,24 @@ header h2 {
   animation: scroll 30s linear infinite;/* 30s調整速度 infinite讓動畫無限跑 */
 }
 .slider-track:hover {
-  display: flex;
-  width: max-content; /* 自動寬度 */
-  animation: none 30s linear infinite;
+  display: flex;/* 使用 flex 排版，讓子元素水平排列 */
+  width: max-content; /* 寬度依照內容自動撐開常用於輪播 / 跑馬燈，避免被父層壓縮 */
+  animation: none 30s linear infinite;/* 動畫會被完全取消，後面的時間、速度、次數皆不作用  hover 時暫停原本的滾動動畫*/
 }
 
 .slide {
     width: 300px;
-    flex-shrink: 0;
+    flex-shrink: 0;/*空間不夠的時候，我不要被壓縮*/
     padding: 0 10px;
 }
 
 .slide img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
+    object-fit: cover;/*控制圖片或影片在容器裡如何填滿空間*/
+    border-radius: 12px;/*圓角*/
 }
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* 移動半軌道，因為複製了一輪(為了無縫移動 100%會用跳的) */
+  0% { transform: translateX(0); }/* 動畫開始時 元素在原本的位置，不會水平位移 */
+  100% { transform: translateX(-50%); }  /* 動畫結束時 元素向左移動自身寬度的50%  比較常用在無限橫向滾動（輪播） */
 }

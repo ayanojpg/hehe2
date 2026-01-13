@@ -51,7 +51,7 @@ server.post("/fuuckyou", (req, res) =>{
     fuuckyouDB.insert(req.body).catch(err => console.log(err));    // 將 req.body 新增到 fuuckyouDB 資料庫
 
 
-    if(req.files && req.files.myFile1){
+    if(req.files && req.files.myFile1){     // 偵測並檢查是否有上傳檔案
         var upFile=req.files.myFile1;
         upFile.mv(__dirname+"/Public/upload/"+upFile.name, function(err){
             if(err){
